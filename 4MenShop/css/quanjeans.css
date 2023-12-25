@@ -74,7 +74,11 @@
     
 }
 .header2{
-   
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+    
 }
 
 .hot{
@@ -162,7 +166,7 @@
     position: absolute;
     height: 17px;
     background: #b31f2a;
-    top: 49px;
+    top: 5px;
     padding: 0px 5px;
     font-size: 11px;
    
@@ -186,7 +190,7 @@
     position: absolute;
     height: 17px;
     background: #b31f2a;
-    top: 49px;
+    top: 5px;
     padding: 0px 5px;
     font-size: 13px;
     /* text-transform: none; */
@@ -359,7 +363,12 @@ img.aonamicon2{
 }
 
 /*============================================= content ======================================================*/
-
+.protect-money{
+text-align: center;
+}
+.protect-money p{
+    display: inline-block;
+}
 .content-left{
     width: 67%;
     height: 2150px;
@@ -411,6 +420,7 @@ img.aonamicon2{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align: center;
 }
 .productimgpig img{
     display: block;

@@ -75,8 +75,15 @@ Header1 */
 /* ==============================================================================================================
                                                 Header2
 =================================================================================================================*/
-
+#count_cart{
+    position: absolute;
+    top: 9px;
+    font-size: 11px;
+    font-weight: bold;
+    color: brown;
+}
 .header2{
+    width: 100%;
     box-sizing: border-box;
     height: 80px;
     display: flex;
@@ -615,6 +622,12 @@ Header1 */
     height: 370px;
     
 }
+.protect-money-new{
+    text-align: center;
+}
+.protect-money-new p{
+    display: inline-block;
+}
 .overlay-new{
     top:0px;
     height: 100%;
@@ -1136,7 +1149,24 @@ p.line-top {
     float: left;
     padding: 0px 38px;
 }
+ /* Định dạng cho thông báo */
+#ThongBaoLoi {
+    padding: 15px;
+    background-color: #58b2ee;
+    color: white;   
+    z-index: 3;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    border-radius: 3px;
+   
+  
+}
 
+.visible {
+    opacity: 1;
+    max-height: 100px; /* Set the maximum height as per your content */
+}
 /* ---------------gio hang----------------------------- */
 .giohang{
     width: 400px;

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="./anh/fontawesome-free-6.4.0-web/css/all.css">
-    
     <title>4MenShop</title>
 </head> 
 
@@ -31,12 +30,19 @@
         <div class="header2">
             <a href="trangchu.html"><img class="logo" src="./anh/banner2.png" alt=""></a>
 
-            <div class="ThemSanPham" >
-                <h4 style="margin: 10px;">Thêm sản phẩm <a href="#"> <i class="fa-solid fa-x"></i></a></h4>
-   
+            <div id="ThemSanPham">
+                <h4 style="margin: 10px;">Thêm sản phẩm <a href="#"></a></h4>
+                <button id="esc" ng-click="ESC()" >X</button>
                 <hr>
-                <div class="form_dien_SP">
+                <div id="form_dien_SP">
                     <form action="">
+                        <div id="div_MaSP">
+                            <label for="">Mã sản phẩm</label>
+                            <div class="Ma_SP">
+                                <input ng-model="maSanPham" type="text" placeholder="" class="Ma_SP_input" readonly>
+                            </div>
+                        </div>
+
                         <div class="Ten_SP">
                             <label for="">Tên sản phẩm</label>
                             <div class="Ma_SP">
@@ -46,14 +52,9 @@
 
                         <div class="Ma_Chuyen_Muc">
                             <label for="">Mã chuyên mục</label>
-                            <!-- <div class="Ma_Chuyen_Muc">
-                                <input ng-model="maChuyenMuc" type="text" placeholder="" class="Ma_SP_input">
-                            </div> -->
                             <select ng-model="maChuyenMuc" style="width: 100%;" class="chosen-select" data-placeholder="Choose a Country...">
-                                <option ng-repeat="x in listChuyenMuc"  value="{{x.maChuyenMuc}}"></option>
-                                <!-- <option value="AL">Alabama</option>
-                                <option value="AK">Alaska</option>
-                                <option value="AZ">Arizona</option>  -->
+                                <option ng-repeat="x in listChuyenMuc"  value="{{x.maChuyenMuc}}">{{x.tenChuyenMuc}}</option>
+
                             </select>
                         </div>
                        
@@ -78,7 +79,7 @@
 
                                 </select></td> -->
                                 <select ng-model="maSize" style="width: 100%;" class="chosen-select" data-placeholder="Choose a Country...">
-                                    <option ng-repeat=""  value=""></option>
+                                    <option ng-repeat="x in listSize"  value="{{x.maSize}}">{{x.tenSize}}</option>
                                     <!-- <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>  -->
@@ -97,6 +98,8 @@
                             <label for=""> Ảnh</label>
                             <div class="">
                                 <input id="upload_Img" ng-model="anhDaiDien" type="file" class="SLuog_SP_input">
+                                <img  style="width: 50px;float: right;margin-right: 47px;margin-top: -10px;" 
+                                    src="{{anhDaiDien}}" alt="">
                             </div>
                         </div>
                         
@@ -108,7 +111,11 @@
                         <a href="./Login.html">Đăng nhập</a>
                     </div> -->
                 </div>
-                <button class="">Thêm sản phẩm</button>
+        
+                
+        
+               
+                <button ng-click="Save()" class="">{{submit}}</button>
             </div>
 
             <div class="banner2right">
@@ -146,16 +153,14 @@
                     </a>
                     <p>Vũ Đình Vinh</p>
                 </div> -->
-                <div class="content-menu">
+                <div class="content-menu" style="position: sticky;">
 
                     <ul class="menu-baiviet">
-                        <li id="clickBaiviet" style="color: #eee;">
+                        <li>
                             <i class="fa-solid fa-book"></i>
-                            Bài viết giới thiệu
-                        </li>
+                            <a href="">Quản lý nhân sự</a></li>
                         <ul class="baiviet-list">
-                            <li><a href="">Đăng bài viết</a></li>
-                            <li><a href="">Danh sách bài viết</a></li>
+                            <li><a href="./adm_NhanVien.html">Quản lý nhân viên</a></li>
                         </ul>
                     </ul>
 
@@ -166,9 +171,9 @@
                             <a href="">Quản lí sản phẩm</a>
                         </li>
                         <ul class="sanpham-list">
-                            <li ><a href="">Chủng loại-Ngành hàng</a></li>
-                            <li ><a href="">Nhà phân phối</a></li>
-                            <li style="background-color: brown;"><a href="">Sản phẩm đang kinh doanh</a></li>
+                            <li ><a href="./admin_chuyen_muc.html">Chủng loại-Ngành hàng</a></li>
+                            <li ><a href="./admin_nha_phan_phoi.html">Nhà phân phối</a></li>
+                            <li style="background-color: brown;"><a href="">Sản phẩm</a></li>
                         </ul>
                     </ul>
 
@@ -178,7 +183,7 @@
                             <a href="">Quản lí khách hàng</a></li>
                         <ul class="khachhang-list">
                          
-                            <li><a href="">Khách hàng</a></li>
+                            <li><a href="./adm_KhachHang.html">Khách hàng</a></li>
                         </ul>
                     </ul>
 
@@ -188,149 +193,82 @@
                             <a href="">Quản lí đơn hàng</a></li>
                         <ul class="donhang-list">
                             <li><a href="">Đơn hàng nhập</a></li>
-                            <li><a href="">Đơn hàng bán</a></li>
+                            <li><a href="./adm_HDB.html">Đơn hàng bán</a></li>
                             <li><a href="">Đang giao cho khách</a></li>
                             <li><a href="">Đã giao thành công</a></li>
-                            <li><a href="">Đơn hàng bị hủy</a></li>
+                            <!-- <li><a href="">Đơn hàng bị hủy</a></li> -->
                         </ul>
                     </ul>
 
                     <ul class="menu-nhanvien">
-                        <li><a href="">Quản lí nhân viên</a></li>
+                        <li>
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <a href="">Thống kê</a>
+                        </li>
+                        <ul class="donhang-list" >
+                            <li ><a href="">Thống kê dữ liệu</a></li>
+                        </ul>
                     </ul>
                 </div>
             </div>
 
             <div class="content-right">
                 <div class="bt-head">
-                    <button type="button" class="bt-add" onclick="ThemSP()">
-                        + Thêm sản phẩm
+                    <button id="nutThem" ng-click="Nut_Them()" type="button" >
+                        Thêm sản phẩm
                     </button>
                     <button type="button" class="bt-create" >
                         <i class="fa-solid fa-trash"></i>
                         Delete
                     </button>
+                    <div id="div-search">
+                        <input type="text" placeholder="Từ khóa tìm kiếm"  >
+                        <button> <i class="fa-solid fa-magnifying-glass" style="color: gray;"></i></button>
+                    </div>
                 </div>
                 <div class="danhmuc">
                     <h2>Quản lí sản phẩm</h3><br>
                     <hr>
                     <table class="table-sp" border="1" style="border-collapse: collapse;">
                         <tr>
-                            <!-- <th>Mã SP</th> -->
+                            <th>Mã SP</th>
                             <th>Chuyên mục</th>
-                            <th>Tên sản phẩm</th>
                             <th>Ảnh</th>
+                            <th>Tên sản phẩm</th>
                             <th>Giá</th>
                             <th>Size</th>
                             <th>Số Lượng</th>
+                            <th colspan="2">Hành động</th>
                             
                         </tr>
-
-                        <tr >
-                            <td>Áo sơ mi</td>
-                            <td >Áo Sơ Mi Tay Dài Rã Ngực Thêu 4M Form Slimfit SM140 Màu Trắng</td>
-                            <td ><img src="./anh/ao-so-mi-tay-dai-ra-nguc-theu-4m-form-slimfit-sm140-mau-trang-18319.jpg" alt=""></td>
-                            <td >345.000</td>
-                            <td >S</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo khoác</td>
-                            <td >Áo Khoác Kaki Rã Phối Viền Lé Gắn Tag Silicon Form Regular AK055 Màu Be</td>
-                            <td ><img src="./anh/admin_SanPham/ao-khoac-kaki-ra-phoi-vien-le-gan-tag-silicon-form-regular-ak055_small-18302.jpg" alt=""></td>
-                            <td >645.000</td>
-                            <td >M</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo khoác</td>
-                            <td >Áo Khoác Da Lộn Rã Phối Regular AK054 Màu Nâu</td>
-                            <td ><img src="./anh/admin_SanPham/ao-khoac-da-lon-ra-phoi-regular-ak054-mau-den_small-18279.jpg" alt=""></td>
-                            <td >645.000</td>
-                            <td >XL</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo thun</td>
-                            <td >Áo Thun Rã Phối Form Regular AT137 Màu Đen</td>
-                            <td ><img src="./anh/admin_SanPham/ao-thun-ra-phoi-form-regular-at137-mau-trang_small-18276.jpg" alt=""></td>
-                            <td >295.000</td>
-                            <td >XL</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo thun</td>
-                            <td >Áo Thun Rã Phối Form Regular AT137 Màu Trắng</td>
-                            <td ><img src="./anh/admin_SanPham/ao-thun-ra-phoi-form-regular-at137_small-18275.jpg" alt=""></td>
-                            <td >300.000</td>
-                            <td >S</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo polo</td>
-                            <td >Áo Polo Rã Phối Thêu CEST LA VIE Form SLimfit PO115 Màu Hồng</td>
-                            <td ><img src="./anh/admin_SanPham/ao-polo-ra-phoi-theu-cest-la-vie-form-slimfit-po115-mau-hong_small-18266.jpg " alt=""></td>
-                            <td >300.000</td>
-                            <td >L</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo VEST</td>
-                            <td >Áo Vest Cổ V 3 Hàng Nút Linen AV1137 Màu Xanh Bích</td>
-                            <td ><img src="./anh/admin_SanPham/ao-vest-co-v-3-hang-nut-linen-mau-xanh-bich-18212.jfif" alt=""></td>
-                            <td >300.000</td>
-                            <td >X</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
-                        </tr>
-
-                        <tr >
-                            <td>Áo Gile</td>
-                            <td >Áo Gile Trơn 4 Nút Form Slimfit AG036 Màu Đen</td>
-                            <td ><img src="./anh/admin_SanPham/gile-slimfit-tron-4-nut-ag036-mau-den_small-18195.jpg" alt=""></td>
-                            <td >300.000</td>
-                            <td >M</td>
-                            <td >100</td>
-                            <td class="sua"><button >Sửa </button></td>
-                            <td class="xoa"><button >Xóa</button></td>
+                        <tr ng-repeat = "x in listSanPham" >
+                            <td >{{x.maSanPham}}</td>
+                            <td>{{x.tenChuyenMuc}}</td>
+                            <td ><img src="{{x.anhDaiDien}}" alt=""></td>
+                            <td id="tensp" >{{x.tenSanPham}}</td>
+                            <td >{{x.gia}}</td>
+                            <td >{{x.tenSize}}</td>
+                            <td >{{x.soLuong}}</td>
+                            <td class="sua"><button ng-click="btn_Sua(x)" >Sửa </button></td>
+                            <td class="xoa"><button ng-click = "Sanpham_Delete(x.maSanPham)">Xóa</button></td>
                         </tr>
                      
                     </table>
 
                     <div class="xemthem">
                         <ul>
-                            <li class="xemthem1" ><a href="">1</a></li>
-                            <li class="xemthem2"  ><a href="">2</a></li>
-                            <li class="xemthem3" ><a href="">3</a></li>
-                            <li class="xemthem4"><a href=""><i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li class="xemthem5"><a href=""><i class="fa-solid fa-angles-right"></i></a></li>
+                            <li ><a href=""><i class="fa-solid fa-chevron-left"></i></a></li>
+                            <div class="pageElement" style="display: flex;">
+                                <!-- <li class="page-item" ><a href="">1</a></li> -->
+                            </div>
+                            <li ><a href=""><i class="fa-solid fa-chevron-right"></i></a></li>
                         </ul>
                     </div>
                 </div>
-
+                
 
             </div>
         </div>
-
         <div class="footer">
             <div class="footer-one" style="margin-left: 40px;">
                 <img type="image" src="https://4menshop.com/logo-footer.png?v=1" >
@@ -345,15 +283,15 @@
                         <li>
                             <i class="fa-regular fa-envelope"></i>
                             Email: 
-                            <a href="mailto:info@4menshop.com" rel="nofollow" title="4MEN EMAIL">info@4menshop.com</a>
+                            <a href="" rel="" title="4MEN EMAIL">info@4menshop.com</a>
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
                             Hotline: 
-                            <a href="tel:0868444644" rel="nofollow" title="4MEN HOTLINE" track="Phone-Footer-0868.444.644">0868.444.644</a>
+                            <a href="tel:0868444644" title="4MEN HOTLINE">0868.444.644</a>
                         </li>
                         <div>
-                            <form class="newsletter" action="https://4menshop.com/dang-ky-nhan-mail-khuyen-mai.html" method="post"> 
+                            <form class="newsletter" action="" method=""> 
                                 <label>	
                                     Đăng ký nhận email khuyến mãi <br>
                                     <input type="text" placeholder="Email của bạn" name="email"> 
@@ -416,7 +354,7 @@
                         ;color: red; display: flex;">
                             <i class="fa-brands fa-youtube"></i>
                         </li>
-                        <li><div class="fb-like fb_iframe_widget" data-href="https://4menshop.com/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="arial" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;font=arial&amp;href=https%3A%2F%2F4menshop.com%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=true&amp;width=100"><span style="vertical-align: bottom; width: 100px; height: 28px;"><iframe name="f1b2a34e4d987dc" width="100px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.4/plugins/like.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df10f16ad1618a14%26domain%3D4menshop.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252F4menshop.com%252Ff3c70ad7c551ac%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;href=https%3A%2F%2F4menshop.com%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=true&amp;width=100" style="border: none; visibility: visible; width: 150px; height: 28px" class=""></iframe></span></div> </li> 
+                        <!-- <li><div class="fb-like fb_iframe_widget" data-href="https://4menshop.com/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="arial" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;font=arial&amp;href=https%3A%2F%2F4menshop.com%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=true&amp;width=100"><span style="vertical-align: bottom; width: 100px; height: 28px;"><iframe name="f1b2a34e4d987dc" width="100px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.4/plugins/like.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df10f16ad1618a14%26domain%3D4menshop.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252F4menshop.com%252Ff3c70ad7c551ac%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;href=https%3A%2F%2F4menshop.com%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=true&amp;width=100" style="border: none; visibility: visible; width: 150px; height: 28px" class=""></iframe></span></div> </li>  -->
                     </li>
                 </ul>
             </div>
@@ -436,17 +374,23 @@
                 </div>
                 <div class="footer-bottom-img"><a href=""><img src="./anh/footer-bottom.png"></a></div>
                 
-                </div>
-               
-                
-                </div>
-
             </div>
         </div>
     </div>
     
-    <script src="../js/admin_SanPham.js"></script>
-
+  
+    <script src="../angular/angular.min.js"></script>
+    <script src="../angular/global.js"></script>
+    <script src="../angular/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+    <!-- <script> 
+        var user = JSON.parse(localStorage.getItem('user'));
+        
+        if (!user) {
+            window.location.href = "Login.html";
+        }
+       
+    </script> -->
 </body>
 </html>

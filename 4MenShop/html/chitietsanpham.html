@@ -125,12 +125,12 @@
             <ul >
                 <li><a href="">4MEN &nbsp; / &nbsp;</a></li>
                 <li><a href="">Áo Nam &nbsp; / &nbsp;</a></li>
-                <li><a href="">Áo Khoác Regular Technical AK036 Màu Rêu</a></li>
+                <li><a class="title" href="" >Áo Khoác Regular Technical AK036 Màu Rêu</a></li>
             </ul>
         </div>
         <div class="content">
             <div class="content-left">
-                <div class="content-left-left">
+                <!-- <div class="content-left-left">
                     <div class="content-left-left-img">
                         <img src="./anh/chitietsanpham1.1.jpg" onclick="changeImage('one')" id="one">
                     </div>
@@ -143,23 +143,21 @@
                     <div class="content-left-left-img">
                         <img src="./anh/chitietsanpham1.4.jpg" onclick="changeImage('four')" id="four">
                     </div>
-                    <!-- <div class="content-left-left-img">
-                        <img src="./anh/chitietsanpham1.5.jpg" onclick="zoomout(this)" alt="imgage">
-                    </div> -->
+                    
                     <div class="content-left-left-img">
                         <img src="./anh/chitietsanpham1.6.jpg" onclick="changeImage('five')" id="five">
                     </div>
                     <div class="content-left-left-img">
                         <img src="./anh/chitietsanpham1.7.jpg" onclick="changeImage('six')"id=six>
                     </div>
-                </div>
+                </div> -->
                 <div id="content-left-right">
-                    <img src="./anh/chitietsanpham1.1.jpg" alt="" id="img-main">
+                    <img class="productimg" src="" alt="" id="img-main">
                 </div>
             </div>
             <div class="content-right">
                 <div class="content-right-header">
-                    <h1>ÁO KHOÁC DẠ REGULAR PHỐI SỌC AK045</h1>
+                    <h1 class="productname"></h1>
                     <div class="feadback">
                         <i class="fa-solid fa-star" style="color: yellow;font-size: 12px;"></i>
                         <i class="fa-solid fa-star" style="color: yellow;font-size: 12px;"></i>
@@ -172,11 +170,11 @@
                         <span style="font-size: 14px;margin-top: 10px;"><u>Giá bán:</u></span>
                     </div>
                     <div class="money-right">
-                        <span style="font-size: 22px; color:#c80204;">490.500 đ</span>
+                        <span class="productprice" style="font-size: 22px; color:#c80204;"></span>
                         <span style="font-size: 13px;margin-left: 10px;color: #666666;"> Giá gốc:</span>
-                        <span style="font-size: 18px;color: #aaaaaa;"><del>545.000 đ</del></span>
+                        <span style="font-size: 18px;color: #aaaaaa;"><del>1.000.000 đ</del></span>
                     </div>
-                    <div style="width: 100%;height: 1px; background-color: #cccccc;float: left; margin: 5px 0px;"></div>
+                    <!-- <div style="width: 100%;height: 1px; background-color: #cccccc;float: left; margin: 5px 0px;"></div> -->
                     <div class="size">
                         <div>
                             SIZE* 
@@ -190,7 +188,7 @@
                         </select>
                         <!-- <button> <i class="fa fa-shopping-cart" style="margin-right: 10px;"></i>ĐĂNG KÍ MUA</button>
                          -->
-                         <a href="giohang.html"><button> <i class="fa fa-shopping-cart" style="margin-right: 10px;"></i>ĐĂNG KÍ MUA</button></a>
+                        <button class="btn_addcart"> <i class="fa fa-shopping-cart" style="margin-right: 10px;"></i>ĐĂNG KÍ MUA</button>
                         <span>
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
                             <a href="" style="color: #000000;"><u>Xem địa chỉ còn sản phẩm này</u></a>
@@ -207,19 +205,19 @@
                     </div>
                     <div class="number">
                         <div>SỐ LƯỢNG*</div>
-                        <select name="size" id="size">
-                            <option value="S" selected>1</option>
-                            <option value="M">2</option>
-                            <option value="L">3</option>
-                            <option value="XL">4</option>
-                            <option value="S">5</option>
-                            <option value="M">6</option>
-                            <option value="L">7</option>
-                            <option value="XL">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
+                        <select id="soluong">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
                         </select>
-                        <span style="margin-left: 15px;"><a href="">+ Thêm vào giỏ hàng</a></span>
+                        <span class="themgiohang" style="margin-left: 15px;"><a>+ Thêm vào giỏ hàng</a></span>
                     </div>
                 </div>
 
@@ -495,7 +493,7 @@
         </div>
     </div>
     
-    <script
+    <!-- <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
     ></script>
@@ -506,8 +504,8 @@
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    ></script> -->
 
-    <script src="./js/chitietsanpham.js"></script>
+    <script src="../js/chitietsanpham.js"></script>
 </body>
 </html>

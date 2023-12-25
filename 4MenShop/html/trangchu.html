@@ -16,6 +16,13 @@
     <title>4MENSHOP</title>
 </head>
 <body>
+    <!-- <div id="ThongBaoLoi" >
+        <div class="" style="width: 100%;height: 10px;background-color: green;"></div>
+        <div style="float: left;"><i class="fa-regular fa-message" style="font-size: 20px; margin-top: 10px;"></i></div>
+        <div style="float: left; margin-left: 10px;">
+            <strong>Thông báo...</strong><br> Sản phẩm đã có trong giỏ hàng!
+        </div>
+    </div> -->
     <div id="trangchu">
         <div class="header1">
            
@@ -63,8 +70,8 @@
                         </li>
                         <li><a href="aonam.html">ÁO NAM</a>
                             <ul class="sub-banner2ul">
-                                <li><a href="">Áo sơ mi</a></li>
-                                <li><a href="">Áo thun</a></li>
+                                <li><a href="./aosomi.html">Áo sơ mi</a></li>
+                                <li><a href="./aothun.html">Áo thun</a></li>
                                 <li><a href="">Áo polo</a></li>
                                 <li><a href="">Áo khoác</a></li>
                                 <li><a href="">Áo len</a></li>
@@ -76,7 +83,7 @@
                         <li><a href="">QUẦN NAM</a>
                             <ul class="sub-banner2ul">
                                 <li><a href="./QuanJeans.html">Quần jeans</a></li>
-                                <li><a href="">Quần tây</a></li>
+                                <li><a href="./quantay.html">Quần tây</a></li>
                                 <li><a href="">Quần kaki</a></li>
                                 <li><a href="">Quần jogger</a></li>
                                 <li><a href="">Quần short</a></li>
@@ -86,9 +93,9 @@
                         </li>
                         <li><a href="">PHỤ KIỆN</a>
                             <ul class="sub-banner2ul">
-                                <li><a href="">Thắt lưng</a></li>
-                                <li><a href="">Ví da</a></li>
-                                <li><a href="">Cà vạt</a></li>
+                                <li><a href="./thatlung.html">Thắt lưng</a></li>
+                                <li><a href="./vida.html">Ví da</a></li>
+                                <li><a href="./cavat.html">Cà vạt</a></li>
                                 <li><a href="">Nơ</a></li>
                                 <li><a href="">Vớ nam</a></li>
                                 <li><a href="">Mũ nón</a></li>
@@ -98,7 +105,7 @@
                         </li>
                         <li><a href="">GIÀY DÉP</a>
                             <ul class="sub-banner2ul">
-                                <li><a href="">Giày</a></li>
+                                <li><a href="./giay.html">Giày</a></li>
                                 <li><a href="">Sandal</a></li>
                                 <li><a href="">Dép nam</a></li>
                             
@@ -108,17 +115,36 @@
                 </div>
                 
                 <div class="banner2right">
-                    <div class="b1">
+                    <div class="b1" >
                         <span class="banner2span">
                             
-                            <a href="#"> <i class="fa-solid fa-cart-shopping" style="color: brown;" onclick="showgiohang()"></i></a>
-                            <div class="giohang">
+                            <a href="#"> <i class="fa-solid fa-cart-shopping" style="color: brown;" ></i></a>
+                            <span id="count_cart"></span>
+                            <div class="giohang" style="display: block;">
                                 <h4 style="margin: 10px;">Sản phẩm trong giỏ hàng</h4>
                                 <hr>
                                 <div class="giohang-chung"> 
-                                 
+                                    <table >
+                                        <tr>
+                                            <td rowspan="3" style="width: 70px;"><img src="./anh/ao-khoac-du-surfing-form-regular-ak051_2_small-17999.jpg" style="width: 100%;height: 100%;"></td>
+                                            <td style="padding-left: 5px;text-align: left;line-height: normal;"> 
+                                                <p>Áo Khoác Dạ Regular Phối sọc AK405 Màu nvfhfjvù Be</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 5px;text-align: left;">
+                                                <p>360.000</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 5px;text-align: left;">
+                                                <button style="margin-bottom: 15px;"> <i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+
+                                    </table>
                                 </div>
-                                <div class="price-total" >Tổng: <span>0</span><sup>đ</sup></div>
+                                <!-- <div class="price-total" >Tổng: <span>0</span><sup>đ</sup></div> -->
                                
                                 <a href="giohang.html"><button class="guidonhang">Gửi đơn hàng</button></a>
                             </div>
@@ -146,12 +172,12 @@
                         <div class="productimg">
                             <div class="productimgpig">
                                 <div style="width: 100%;height: 100%; position: absolute;">
-                                    <a href="chitietsanpham.html"><img src="./anh/Thoitrangmoinhat1.1.jpg" alt=""></a>
+                                    <a ><img src="./anh/Thoitrangmoinhat1.1.jpg" alt="" ></a>
                                     <div class="overlay" style="position: absolute;">
-                                        <div class="hoverlay-img"><a href="chitietsanpham.html"><img src="./anh/thoitrangmoinhat1.2.jpg" alt=""></a></div>
+                                        <div class="hoverlay-img"><a ><img src="./anh/thoitrangmoinhat1.2.jpg" alt=""></a></div>
                                     </div>
-                                    <div class="overlayitem">
-                                        <span class="overlayitemicon">
+                                    <div class="overlayitem" >
+                                        <span class="overlayitemicon" >
                                             <i class="fa-solid fa-cart-shopping" style="color: white;rotate: -20deg;"></i>
                                         </span>
                                     </div>
@@ -159,11 +185,11 @@
                             </div>
                             <div class="productimgsmall">
                                 
-                                    <a href=""><img src="./anh/Thoitrangmoinhat1.1.jpg" alt=""></a>
+                                    <a ><img src="./anh/Thoitrangmoinhat1.1.jpg" alt=""></a>
                                     
                             </div>
                             <div class="producttext">
-                                <a href="" class="spannote" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a  class="spannote" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Dạ Regular Phối sọc AK405 Màu Be</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">540.000</p></div>
@@ -193,8 +219,7 @@
                                    
                             </div>
                             <div class="producttext">
-                                
-                                <a href="" class="spannote" title="Áo Khoác Raglan Regular Phối Màu AK049 Màu Đen" 
+                                <a class="spannote" title="Áo Khoác Raglan Regular Phối Màu AK049 Màu Đen" 
                                 style="width: 100%;text-align: center;" >Quần Jeans Đen Wash Cào Gắn Tag Da Form Slimfit QJ086</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">545.000</p></div>
@@ -223,7 +248,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Raglan Regular Phối Màu AK053 Màu Đen" 
+                                <a class="spannote" title="Áo Khoác Raglan Regular Phối Màu AK053 Màu Đen" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Raglan Regular Phối Màu AK053 Màu Đen</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">545.000</p></div>
@@ -252,7 +277,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Da Lộn Regulan Phối Màu AK047 Màu Bò" 
+                                <a  class="spannote" title="Áo Khoác Da Lộn Regulan Phối Màu AK047 Màu Bò" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Da Lộn Regulan Phối Màu AK047 Màu Bò</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">645.000</p></div>
@@ -280,7 +305,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Dạ Regular Phối Vai Màu AK046 Màu Đen" 
+                                <a class="spannote" title="Áo Khoác Dạ Regular Phối Vai Màu AK046 Màu Đen" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Dạ Regular Phối Vai Màu AK046 Màu Đen</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">545.000</p></div>
@@ -308,7 +333,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Regular Chạy Viền AK044 Màu Đen" 
+                                <a class="spannote" title="Áo Khoác Regular Chạy Viền AK044 Màu Đen" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Regular Chạy Viền AK044 Màu Đen</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">595.000</p></div>
@@ -323,7 +348,7 @@
                                 <div class="overlay" style="position: absolute;">
                                     <div class="hoverlay-img"><a href=""><img src="./anh/thoitrangmoinhat7.1.jpg" alt=""></a></div>
                                 </div>
-                                <div class="overlayitem">
+                                <div class="overlayitem" >
                                     <span class="overlayitemicon">
                                         <i class="fa-solid fa-cart-shopping" style="color: white;rotate: -20deg;"></i>
                                     </span>
@@ -336,7 +361,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Jeans Regular Minimalism AK048 Màu Xanh Đen" 
+                                <a class="spannote" title="Áo Khoác Jeans Regular Minimalism AK048 Màu Xanh Đen" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Jeans Regular Minimalism AK048 Màu Xanh Đen</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">685.000</p></div>
@@ -364,7 +389,7 @@
                             </div>
                             <div class="producttext">
                                 
-                                <a href="" class="spannote" title="Áo Khoác Phao Regular Sọc Ngang Màu Đen" 
+                                <a class="spannote" title="Áo Khoác Phao Regular Sọc Ngang Màu Đen" 
                                 style="width: 100%;text-align: center;" >Áo Khoác Phao Regular Sọc Ngang Màu Đen</a>
                             </div>
                             <div class="protect-money"><p style="color: brown; text-align: center;">545.000</p></div>
@@ -422,15 +447,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Vớ Cổ Ngắn V0038 Màu Rêu</p></a>
     
     
                             </div>
-                            <div class="protect-money-new">
-                                <p style="color: brown; text-align: center;">29.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: black;">35.000</em>
+                            <div class="protect-money-new" >
+                                <p style="color: brown; ">29.000
+                                    
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: black;">35.000</em>
                             </div>
                         </div>
                     </div>
@@ -464,15 +490,15 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a  class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Quần Short Regular Basic QS031 Màu Đen</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">219.000
-                                    <em style="text-decoration:line-through;font-size: 13px; color: #666;">275.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px; color: #666;">275.000</em>
                             </div>
                         </div>
                     </div>
@@ -505,15 +531,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Quần Short Slimfit Màu Đen</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">290.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">350.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">350.000</em>
+
                             </div>
                         </div>
                     </div>
@@ -546,15 +573,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a  class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Áo Polo Bo Sọc Thêu Gấu PO048 Màu Trắng</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">295.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">315.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">315.000</em>
+
                             </div>
                         </div>
                     </div>
@@ -587,15 +615,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Áo Polo Regular Trơn PO066 Màu Đen</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">119.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">190.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">190.000</em>
+
                             </div>
                         </div>
                     </div>
@@ -626,15 +655,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Áo Thun Regular In Thêu AT088 Màu Đen</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">29.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">35.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">35.000</em>
+
                             </div>
                         </div>
                     </div>
@@ -667,15 +697,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Áo Thun Tay Dài Vải Tổ Ong AT061 Màu Xám Xanh</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">245.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">275.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">275.000</em>
+
                             </div>
                         </div>
                     </div>
@@ -707,15 +738,16 @@
     
                             <div class="producttext-new">
                                 
-                                <a href="" class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
+                                <a  class="spannote-new" title="Áo Khoác Dạ Regular Phối sọc AK405 Màu Be" 
                                 style="width: 100%;text-align: center;" ><p class="p-product-new-1" >Quần Jeans Slimfit Bassic QJ062 Màu Đen</p></a>
     
     
                             </div>
                             <div class="protect-money-new">
                                 <p style="color: brown; text-align: center;">470.000
-                                    <em style="text-decoration:line-through;font-size: 13px;color: #666;">500.000</em>
                                 </p>
+                                <em style="text-decoration:line-through;font-size: 13px;color: #666;">500.000</em>
+
                             </div>
                         </div>
                     </div>

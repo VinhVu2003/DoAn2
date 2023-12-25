@@ -123,7 +123,7 @@
 
         <div class="content">
             <div class="content-left">
-                <form action="">
+                <form id="contactForm">
                     <legend>Thông tin liên hệ giao hàng</legend>
                     <div class="form-group">
                         <label for="">Họ và tên*</label>
@@ -156,7 +156,7 @@
                     </div>
                 </form>
 
-                <form action="">
+                <form id="deliveryForm">
                     <legend>Địa chỉ giao hàng</legend>
                     <div class="form-group">
                         <label for="">Chọn tỉnh thành*</label>
@@ -201,35 +201,33 @@
                    
                 </form>
 
-                <form action="" style="margin-top: 30px;">
+                <form id="paymentForm" style="margin-top: 30px;" >
                     <legend>Hình thức thanh toán</legend>
                     <div class="thanh_toan">
-                        <label for="" class="COD">
-                            <input type="radio" >
+                        <label  class="COD">
+                            <input type="radio" name="paymentMethod" >
                             <span><img style="width: 56px;height: 31px;margin-top: 6px;" src="./anh/giohang-radio1.svg"></span>
-                            <div style="width: 70%;margin-top: 5px;
-                            float: right;">
+                            <div style="width: 70%;margin-top: 5px;float: right;">
                                 COD<br>
                                 <em>Thanh toán khi nhận hàng</em>
                             </div>
                         </label>
 
-                        <label for="" class="COD">
-                            <input type="radio" >
+                        <label  class="COD">
+                            <input type="radio" name="paymentMethod" >
                             <span><img style="width: 56px;height: 31px;margin-top: 6px;" src="./anh/money.png"></span>
-                            <div style="width: 70%;margin-top: 5px;
-                            float: right;">
+                            <div style="width: 70%;margin-top: 5px;float: right;">
                                 COD<br>
                                 <em>Thanh toán khi nhận hàng</em>
                             </div>
                         </label>
                     </div>
-                    <button class="thanh-toan">THANH TOÁN</button>
                 </form>
+                <button id="btn_thanh_toan">THANH TOÁN</button>
             </div>
             
             <div class="content-right">
-                <form action="">
+                <form>
                     <legend>Giỏ hàng của bạn</legend>
                     <table  class="content-right-giohang">
                         <thead>
@@ -243,25 +241,30 @@
                                 <th style="width: 50px;">Xóa</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 5px;"><img src="./anh/chitietsanpham1.1.jpg" style="width: 50px;"></td>
-                                <td><p><span class="TTSP">Áo Khoác Dạ Regular Phối sọc AK405 Màu Be</span></p></td>
-                                <td><input class="sl" type="number" value="1" min="0"></td>
-                                
-                                <td><select name="" id="" class="size">
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                </select></td>
-                                <td> <p><span class="gia">320.000</span></p></td>
+                        <tbody class="parentListCart" >
+                            <!-- <tr id="listCart" >
+                                <td style="padding: 5px;"><img src="./anh/admin.png" style="width: 50px;"></td>
+                                <td ng-model="tenSanPham"><p><span class="TTSP">cdsscdcd</span></p></td>
+                                <td style="display: flex;margin-top: 13px;">
+                                    <div ><button class="tang" type="button">+</button></div>
+                                    <input  class="sl" type="text" value="1" min="0" >
+                                    <div ><button class="giam" type="button">-</button></div>
+                                </td>
+                                <td>
+                                    <select name="" id="" class="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                </td>
+                                <td> <p><span class="gia">200000</span></p></td>
                                 <td><button class="xoa">Xóa</button></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </form> 
                 
-                <form action="">
+                <form >
                     <legend>Mã giảm giá (nếu có)</legend>
                     <div class="form-group">
                         
@@ -272,10 +275,10 @@
                     </div>
                     
                 </form>
-                <form action="">
+                <form >
                     <legend>Tổng:</legend>
-                    <div style="width: 100%;height: 30px;font-size: 14px; border-bottom: 1px solid gray;padding: 5px;">Số tiền mua sản phẩm:
-                        <span style="float: right;">490.000</span>
+                    <!-- <div style="width: 100%;height: 30px;font-size: 14px; border-bottom: 1px solid gray;padding: 5px;">Số tiền mua sản phẩm:
+                        <span  style="float: right;"></span>
                     </div>
                     <div style="width: 100%;height: 30px;font-size: 14px; border-bottom: 1px solid gray;padding: 5px;">Chi tiết giảm giá</div>
                     <div style="width: 100%;height: 30px;font-size: 14px; border-bottom: 1px solid gray;padding: 5px;font-weight: bold;margin-top: 15px;">
@@ -283,14 +286,15 @@
                     </div>
                     <div style="width: 100%;height: 30px;font-size: 12px;padding: 5px;margin: 0px 0px 20px 10px;">
                         Tổng trọng lượng sản phẩm: 400Gram
-                    </div>
+                    </div> -->
                     <div style="width: 100%;height: 30px;font-size: 14px; border-top: 1px solid gray;padding: 5px;font-weight: bold;">
                         Tổng tiền thanh toán
-                        <span style="float: right;">490.500</span>
+                        <span class="total-span" style="float: right;"></span>
                     </div>
                 </form>
             </div>
         </div>
+        
         <div class="footer">
             <div class="footer-one" style="margin-left: 40px;">
                 <img type="image" src="https://4menshop.com/logo-footer.png?v=1" >
@@ -400,6 +404,7 @@
             
         </div>
     </div>
-    <script src="giohang.js"></script>
+    <script src="../js/giohang.js"></script>
+    <!-- <script src="../jquery/jquery.2.1.1.min.js"></script> -->
 </body>
 </html>

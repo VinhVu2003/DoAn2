@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="../css/registry.css">
     <link rel="stylesheet" href="./anh/fontawesome-free-6.4.0-web/css/all.css">
     <title>Document</title>
+    
 </head>
 <body>
     <div class="registry">
@@ -39,7 +41,7 @@
                     <span class="banner2span">
                         
                         <a href="#"> <i class="fa-solid fa-cart-shopping" style="color: brown;" onclick="showgiohang()"></i></a>
-                        
+                    </span>
                     
                 </div>
                 <div class="b1">
@@ -60,40 +62,40 @@
             </ul>
         </div>
         <div class="content">
-            <form action="">
+            <form >
                 <legend>Thông tin đăng kí</legend>
 
                 <div class="form-group">
                     <label for="">Tài khoản</label>
                     <div class="form-group-input">
-                        <input type="text" class="content-left-input">
+                        <input type="text" class="content-left-input" oninput="checktk(this)" >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Mật khẩu</label>
                     <div class="form-group-input">
-                        <input type="" placeholder="" class="content-left-input">
+                        <input type="" placeholder="" class="content-left-input" oninput="checkmk(this)">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="">Nhập lại mật khẩu</label>
                     <div class="form-group-input">
-                        <input type="" placeholder="" class="content-left-input">
+                        <input type="" placeholder="" class="content-left-input" oninput="checkmknhaplai(this)" >
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Số điện thoại</label>
+                    <label >Số điện thoại</label>
                     <div class="form-group-input">
-                        <input type="text" class="content-left-input">
+                        <input type="text" class="content-left-input" oninput="checksdt(this)">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="">Họ và tên</label>
                     <div class="form-group-input">
-                        <input type="text" class="content-left-input">
+                        <input type="text" class="content-left-input" oninput="checkname(this)">
                     </div>
                 </div>
               
@@ -220,16 +222,6 @@
             
         
     </div>
-    <script>
-        // Lấy button "Đăng nhập"
-        var loginButton = document.getElementById("button");
-
-        // Thêm sự kiện click cho button
-        loginButton.addEventListener("click", function() {
-        alert("Đăng kí thành công")
-        // Chuyển hướng trang đến trang chủ
-        window.location.href = "Login.html";
-        });
-    </script>
+    <script src="../js/dangki.js"></script> 
 </body>
 </html>

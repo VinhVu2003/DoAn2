@@ -162,9 +162,9 @@
     padding: 0px 5px;
     font-size: 13px;
     /* text-transform: none; */
-    right: 708px;
+    /* right: 708px;
     color: #fff;
-}
+} */
 .banneritem2::after{
    
     content: '';

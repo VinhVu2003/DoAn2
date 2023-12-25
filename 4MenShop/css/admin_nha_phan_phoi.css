@@ -212,6 +212,8 @@ padding-top: 10px;
 }
 .table-sp tr th{
     padding: 10px 10px 10px 10px;
+    background-color: #abe6f7f7;
+    width: 160px;
 }
 td{
     padding: 5px;
@@ -315,9 +317,10 @@ td{
 }
 .content-menu{
     width: 100%;
-    height: 600px;
+    height: 645px;
     /* background-color: #b31f2a; */
-    float: left;
+    position: sticky;
+    top:10px;
     margin-top: 10px;
 }
 .content-menu ul li a{
@@ -361,7 +364,7 @@ td{
     height: 60px;
     /* background-color: #b31f2a; */
 }
-.bt-add{
+#nutThem{
     width: 135px;
     height: 30px;
     background-color: rgb(39, 77, 216);
@@ -474,19 +477,25 @@ text-align: center;
 }
 
 /* --------------add_SanPham------------------------------------- */
-.ThemSanPham{
+#ThemSanPham{
     width: 400px;
     height: 500px;
     overflow: auto;
     padding: 0px 20px;
-    /* display: none; */
+    display: none;
     background-color: white;
     border: 1px solid black;
     position: absolute;
     right: 470px;
     top: 46px;
+    position: sticky;
 }
-.ThemSanPham h4{
+#ThemSanPham{
+    position: fixed;
+    top: 20px;
+
+}
+#ThemSanPham h4{
     color: #b31f2a;
     text-align: center;
 }
@@ -494,17 +503,177 @@ text-align: center;
     width: 100%;
 }
 
-.fa-x{
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #292929;
+#btn_Xoa{
+    display: none;
 }
-
-
+#btn_Sua{
+    display: none;
+    margin-top: 10px;
+}
 #Nhaphanphoi{
     background-color: brown;
 }
 /* #chuyenmucsp{
     background-color: brown;
 } */
+#esc{
+    position:absolute;
+    top: 10px;
+    right: 15px;
+}
+/* ----------------------------------------footer----------------------------------------------------- */
+.footer{
+    width: 100%;
+    height: 611px;
+    box-sizing: border-box;
+    background: #1e1e1e;
+    padding: 30px 0 15px;
+    color: #bbb;
+    float: left;
+}
+.footer-one{
+    width: 23%;
+    height: 356px;
+    margin: 0px 0px 20px;
+    padding: 0px 15px;
+    float: left;
+}
+.footer-one ul li a{
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+}
+.footer ul li {
+    line-height: 22px;
+    margin-bottom: 7px;
+}
+.footer-list{
+    list-style: none;
+    text-decoration: none;
+    
+}
+.footer-one ul li a:hover {
+    color: #b31f2a;
+}
+.newsletter input {
+    height: 36px;
+    background: #343434;
+    border: none;
+    color: #ccc;
+    padding: 0 20px;
+    line-height: 36px;
+    width: 100%;
+    border-radius: 3px 0 0 3px;
+    outline: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 86px;
+}
+.newsletter button {
+    border-radius: 0 3px 3px 0;
+    background: #b31f2a;
+    height: 36px;
+    line-height: 39px;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    position: relative;
+    float: right;
+    margin-top: -36px;
+}
+.footer-h5{
+    margin-bottom: 15px;
+}
+.footer-h5 a{
+    color: #eee;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    text-decoration: underline;
+   
+}
+
+.footer-one-ggmap{
+    width: 23%;
+    height: 356px;
+    margin: 0px 0px 20px;
+    padding: 0px 15px;
+    float: left;
+}
+.footer-one-ggmap .footer-h5 a{
+    color: #eee;
+    margin-bottom: 15px;
+    
+}
+.footer-one-ggmap img{
+    max-width: 100%;
+}
+.footer-one-ggmap ul li a:hover{
+    color: #b31f2a;
+}
+.fab, .fa-brands {
+    margin-right: 10px;
+    font-weight: 400;
+}
+.footer-bottom{
+    width: 100%;
+    height: 211px;
+    background: #131313;
+    padding: 25px 0;
+    float: left;
+}
+.footer-bottom-content{
+    width: 70%;
+    margin-left: 55px;
+    float: left;
+}
+.footer-bottom-content p{
+    font-size: 14px;
+    color: #bbbbbb;
+}
+.footer-bottom-content p a{
+    color: white;
+    text-decoration: none;
+}
+.footer-bottom p{
+    color: #bbb;
+    margin: 0;
+}
+
+p.line-top {
+    border-top: 1px solid #2c2c2c;
+    margin-top: 15px;
+    padding-top: 10px;
+    clear: both;
+}
+.footer-bottom-img{
+    
+    width: 20%;
+    height: 142px;
+    float: left;
+    padding: 0px 38px;
+}
+#div-search{
+    width: 300px;position: absolute;
+    right: 80px;
+    top: 185px;
+}
+#div-search input{
+    outline: none;
+    width: 90%;
+    height: 34px;
+    border: 1px solid #ddd;
+    padding: 0px 20px;
+}
+#div-search button{
+    height: 34px;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #ffffff;
+    margin-left: -18px;   
+}

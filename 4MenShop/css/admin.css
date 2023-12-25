@@ -212,6 +212,7 @@ padding-top: 10px;
 }
 .table-sp tr th{
     padding: 10px 10px 10px 10px;
+    background-color: #abe6f7f7;
 }
 td{
     padding: 5px;
@@ -283,7 +284,7 @@ td{
     
 }
 .content-left{
-    height: 1050px;
+    height: 950px;
     width: 25%;
     background-color:#444;
     padding: 0px 10px;
@@ -315,9 +316,10 @@ td{
 }
 .content-menu{
     width: 100%;
-    height: 600px;
+    height: 645px;
     /* background-color: #b31f2a; */
-    float: left;
+    position: sticky;
+    top:10px;
     margin-top: 10px;
 }
 .content-menu ul li a{
@@ -351,7 +353,7 @@ td{
 /* ---------------content-right------------------- */
 .content-right{
     width: 75%;
-    height: 1050px;
+    height: 950px;
     background-color: #f2eeee;
     float: left;
     
@@ -361,7 +363,7 @@ td{
     height: 60px;
     /* background-color: #b31f2a; */
 }
-.bt-add{
+#nutThem{
     width: 135px;
     height: 30px;
     background-color: rgb(39, 77, 216);
@@ -470,8 +472,18 @@ text-align: center;
     font-size: 11px;
 
 }
-
-/* ---------------------------footer------------------------------------- */
+.pageElement{
+    display: flex;
+    float: left;
+}
+.page-item:hover{
+    color: brown;
+    cursor: pointer;
+}
+.fa-solid{
+    font-size: 10px;
+}
+/* ----------------------------------------footer----------------------------------------------------- */
 .footer{
     width: 100%;
     height: 611px;
@@ -569,7 +581,6 @@ text-align: center;
     margin-right: 10px;
     font-weight: 400;
 }
-/* ------------------------------------------------------------------------- */
 .footer-bottom{
     width: 100%;
     height: 211px;
@@ -609,24 +620,32 @@ p.line-top {
     padding: 0px 38px;
 }
 
-
 /* --------------add_SanPham------------------------------------- */
-.ThemSanPham{
+#ThemSanPham{
     width: 400px;
     height: 500px;
     overflow: auto;
     padding: 0px 20px;
-    /* display: none; */
+    display: none;
     background-color: white;
     border: 1px solid black;
     position: absolute;
     right: 470px;
     top: 46px;
 }
-.ThemSanPham h4{
+#ThemSanPham{
+    position: fixed;
+    top: 20px;
+
+}
+#ThemSanPham h4{
     color: #b31f2a;
     text-align: center;
 }
+#esc{
+    position: absolute;
+    top: 10px;
+    right: 21px;}
 .Ma_SP_input,.Ten_SP_input,.Gia_SP_input,.Size_SP_input,.SLuong_SP_input{
     width: 100%;
 }
@@ -643,4 +662,28 @@ td img{
 }
 #tensp{
     width: 45%;
+}
+#div_MaSP{
+    opacity:0.4;
+   
+}
+#div-search{
+    width: 300px;position: absolute;
+    right: 80px;
+    top: 185px;
+}
+#div-search input{
+    outline: none;
+    width: 90%;
+    height: 34px;
+    border: 1px solid #ddd;
+    padding: 0px 20px;
+}
+#div-search button{
+    height: 34px;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #ffffff;
+    margin-left: -18px;   
 }
